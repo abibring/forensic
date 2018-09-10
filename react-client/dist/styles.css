@@ -1,8 +1,13 @@
+.app {
+
+}
+
 .header-pic {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  position: relative;
 }
 
 .landing-page-text {
@@ -12,10 +17,9 @@
   width: 50%;
 }
 
-.bottom-nav-info {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  text-align: center;
+.nav-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }

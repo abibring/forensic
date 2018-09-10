@@ -21,6 +21,7 @@
     "materialize-css": "^1.0.0-rc.2",
     "mongoose": "^5.2.13",
     "react": "^16.5.0",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.0"
   },
   "devDependencies": {
