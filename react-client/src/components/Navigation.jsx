@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav, Navbar, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
 
-const navCategories = ['Home', 'Expert Services', 'Criminal Law', 'Immigration Law', 'Employment Law', 'SS Disability', 'Negligence Law', 'On The Air', 'In The News', 'Contact Us'];
+const navCategories = ['Home', 'Expert Services', 'Criminal Law', 'Immigration Law', 'Employment Law', 'SS Disability', 'Negligence Law', 'On The Air', 'In The News'];
 const dropDownCategories = ['Dr. Stephen Reich', 'Dr. Isabel A. Rodriguez', 'Dr. Gerald Bryant', 'Dr. Judith Gibbons', 'Dr. Tom Boland', 'Dr. Andrea Hamilton', 'Dr. Harry Schmitz'];
 class Navigation extends React.Component {
   constructor(props) {
@@ -10,38 +10,19 @@ class Navigation extends React.Component {
   }
 
   render() {
+    const { onClick } = this.props;
     return (
-      <Navbar inverse collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <ul onClick={this.props.onClickHome}>Home</ul>
-          </Navbar.Brand>
-        </Navbar.Header>
-        <br />
-        <Nav></Nav>
-          {/* <a href="#" className="brand-logo">
-            Logo
-          </a> */}
-          <ul>
-            {this.state.navCategories.map(navCat => (
-              // <li key={navCat}>
-              //   <a href="#" onClick={() => this.props.onClick(navCat)}>{navCat}</a>
-              // </li>
-                  <NavItem onClick={() => this.props.onClick(navCat)} href="#">
-                  {navCat}
-                </NavItem>
+      <Navbar inverse collapseOnSelect fixedTop fluid>
+        <Nav>
+          {this.state.navCategories.map(navCat => <NavItem  href="#" onClick={() => onClick(navCat)}>{navCat}</NavItem>)}
+          <NavDropdown title="Experts" id="basic-nav-dropdown">
+            {this.state.dropDownCategories.map((dropDownCat, i) => (
+              <MenuItem onClick={() => onClick(dropDownCat)} eventKey={i}>{dropDownCat}</MenuItem>      
             ))}
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              {this.state.dropDownCategories.map((dropDownCat, i) => (
-                  // <div onChange={this.props.onClick(dropDownCat)}>
-                    <MenuItem >{dropDownCat}</MenuItem>      
-                  // </div>
-                       
-              ))}
-              <MenuItem divider />
-            </NavDropdown>
-          </ul>
-       <Nav />
+            <MenuItem divider />
+          </NavDropdown>
+          <NavItem href="#" onClick={() => onClick('Contact Us')}>Contact Us</NavItem>
+       </Nav>
       </Navbar>
     );
   }

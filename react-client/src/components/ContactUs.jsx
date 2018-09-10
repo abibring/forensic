@@ -11,8 +11,6 @@ class ContactUs extends React.Component {
       <div>
         <img src="http://forensicpsychologyexperts.com/images/header_topimage.jpg" />
         <br />
-        <button onClick={this.props.onClick}>Go Back Home</button>
-        <br />
         <img src="http://forensicpsychologyexperts.com/images/header_slogan.gif" alt="" />
         <h3>Contact Us</h3>
         <p>

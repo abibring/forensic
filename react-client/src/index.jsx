@@ -24,76 +24,69 @@ import ContactUs from './components/ContactUs.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: true, showCriminal: false, showHome: true, showExpert: false, showEmployment: false  };
+    this.state = { showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: true, showExpert: false, showEmployment: false  };
     this.onClickNav = this.onClickNav.bind(this);
-    this.onClickReturnHome = this.onClickReturnHome.bind(this);
   }
   onClickNav(navCat) {
     // console.log(navCat)
-    // const { showNav, showExpert, showCriminal, showHome } = this.state;
+    // const { , showExpert, showCriminal, showHome } = this.state;
     if (navCat === 'Expert Services') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: true, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: true, showEmployment: false });
     } else if (navCat === 'Criminal Law') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: true, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: true, showHome: false, showExpert: false, showEmployment: false });
     } else  if (navCat === 'Immigration Law') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: true, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: true, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'Employment Law') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: true });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: true });
     } else if (navCat === 'SS Disability') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: true, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: true, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'Negligence Law') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: true, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: true, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'Dr. Stephen Reich') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: true, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: true, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'Dr. Isabel A. Rodriguez') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: true, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: true, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'Dr. Gerald Bryant') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: true, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: true, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'Dr. Judith Gibbons') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: true, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: true, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'Dr. Tom Boland') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: true, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: true, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'Dr. Andrea Hamilton') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: true, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: true, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'Dr. Harry Schmitz') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: true, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: true, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'On The Air') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: true, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: false, showOnAir: true, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'In The News') {
-      this.setState({ showContact: false, showInNews: true, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+      this.setState({ showContact: false, showInNews: true, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
     } else if (navCat === 'Contact Us') {
-      this.setState({ showContact: true, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showNav: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else {
-
+      this.setState({ showContact: true, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
+    } else if (navCat === 'Home') {
+      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: true, showExpert: false, showEmployment: false });
     }
   }
-  onClickReturnHome(e) {
-    // const { showExpert, showNav } = this.state;
-    this.setState({ showNav: true, showHome: true, showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showExpert: false, showEmployment: false});
-  }
-
   render() {
-    const { showOnAir, showInNews, showContact, showHarry, showAndrea, showTom, showJudith, showGerald, showIsabel, showStephen, showExpert, showNav, showCriminal, showHome, showImmigration, showEmployment, showDisability, showNegligence } = this.state;
     return (
       <div className="app">
-        {showHome ? <HomePage /> : ''}
-        {showNav ?  <Navigation onClick={this.onClickNav} onClickHome={this.props.onClickReturnHome} /> : '' }
-        {showExpert ? <ExpertServices onClick={this.onClickReturnHome}/> : ''}
-        {showCriminal ? <CriminalLaw onClick={this.onClickReturnHome}/> : ''}
-        {showImmigration ? <ImmigrationLaw onClick={this.onClickReturnHome} /> : ''}
-        {showEmployment ? <EmploymentLaw onClick={this.onClickReturnHome} /> : ''}
-        {showDisability ? <SSDisability onClick={this.onClickReturnHome}/> : ''}
-        {showNegligence ? <Negligence onClick={this.onClickReturnHome}/> : ''}
-        {showStephen ? <StephenReich onClick={this.onClickReturnHome}/> : ''}
-        {showIsabel ? <IsabelRodriguez onClick={this.onClickReturnHome}/> : ''}
-        {showGerald ? <GeraldBryant onClick={this.onClickReturnHome} /> : ''}
-        {showJudith ? <JudithGibbons onClick={this.onClickReturnHome} /> : ''}
-        {showTom ? <TomBoland onClick={this.onClickReturnHome} /> : ''}
-        {showAndrea ? <AndreaHamilton onClick={this.onClickReturnHome} /> : ''}
-        {showHarry ? <HarrySchmitz onClick={this.onClickReturnHome} /> : ''}
-        {showOnAir ? <OnTheAir onClick={this.onClickReturnHome} /> : ''}
-        {showInNews ? <InTheNews onClick={this.onClickReturnHome} /> : ''}
-        {showContact ? <ContactUs onClick={this.onClickReturnHome} /> : ''}
+        <Navigation onClick={this.onClickNav} />
+        {this.state.showHome ? <HomePage /> : ''}
+        {this.state.showExpert ? <ExpertServices onClick={this.onClickNav}/> : ''}
+        {this.state.showCriminal ? <CriminalLaw /> : ''}
+        {this.state.showImmigration ? <ImmigrationLaw  /> : ''}
+        {this.state.showEmployment ? <EmploymentLaw  /> : ''}
+        {this.state.showDisability ? <SSDisability /> : ''}
+        {this.state.showNegligence ? <Negligence /> : ''}
+        {this.state.showStephen ? <StephenReich /> : ''}
+        {this.state.showIsabel ? <IsabelRodriguez /> : ''}
+        {this.state.showGerald ? <GeraldBryant  /> : ''}
+        {this.state.showJudith ? <JudithGibbons  /> : ''}
+        {this.state.showTom ? <TomBoland /> : ''}
+        {this.state.showAndrea ? <AndreaHamilton /> : ''}
+        {this.state.showHarry ? <HarrySchmitz /> : ''}
+        {this.state.showOnAir ? <OnTheAir /> : ''}
+        {this.state.showInNews ? <InTheNews /> : ''}
+        {this.state.showContact ? <ContactUs /> : ''}
       </div>
     );
   }

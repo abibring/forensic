@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer.jsx';
 
 class IsabelRodriguez extends React.Component {
   constructor(props) {
@@ -11,7 +12,6 @@ class IsabelRodriguez extends React.Component {
       <div>
         <img src="http://forensicpsychologyexperts.com/images/header_topimage.jpg" />
         <br />
-        <button onClick={this.props.onClick}>Go Back Home</button>
         <img src="http://forensicpsychologyexperts.com/images/header_slogan.gif" alt="" />
         <p />
         <h3>
@@ -144,53 +144,7 @@ class IsabelRodriguez extends React.Component {
           the accident led to a diagnosis of a single episode major depressive
           disorder.
         </p>
-        <td
-          className="botlefnav"
-          colspan="3"
-          valign="bottom"
-          style={{ color: 'red' }}
-        >
-          <div align="center">
-            <p />
-            <p className="botlefnav">
-              <strong>
-                FORENSIC PSYCHOLOGY GROUP &bull; 141 EAST 55TH STREET, SUITE 2A
-                &bull; NEW YORK, NY 10022 &bull; 212-935-6133
-              </strong>
-            </p>
-          </div>
-        </td>
-        <br />
-        <td className="botlefnav" colspan="3" valign="bottom">
-          <div align="center">
-            <p />
-            <p>
-              <i>Evening and Weekend Appointments Available</i>
-            </p>
-          </div>
-        </td>
-        <br />
-        <td className="botlefnav" colspan="3" valign="bottom">
-          <div align="center">
-            <p />
-            <p>
-              <i>
-                To protect the privacy of our clients and their families, the
-                names, ages, and locations
-                <br />
-                of the cases mentioned on this website have been changed.
-              </i>
-            </p>
-          </div>
-        </td>
-        <br />
-        <td className="botlefnav" colspan="3" valign="bottom">
-          <div align="center">
-            <p />
-            <p>&copy; 2009-2017 Watson Communications</p>
-          </div>
-        </td>
-        <br />
+        <Footer />
       </div>
     );
   }

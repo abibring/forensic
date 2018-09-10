@@ -11,7 +11,6 @@ class ExpertServices extends React.Component {
       <div>
         <img src="http://forensicpsychologyexperts.com/images/header_topimage.jpg" />
         <br />
-        <button onClick={this.props.onClick}>Go Back Home</button>
         <h3>Expert Witness Testimony and Evaluations</h3>
         <p>
           When your legal issue has a psychological component, a comprehensive
@@ -26,9 +25,9 @@ class ExpertServices extends React.Component {
         <h3>Criminal Law</h3>
         <p>
           Our experts offer services to both criminal defense attorneys and
-          prosecutors in many areas of{' '}
-          <a href="es_criminal.shtml" className="inline">
-            Criminal Law
+          prosecutors in many areas of
+          <a href="#" className="inline" onClick={() => this.props.onClick('Criminal Law')}>
+          &nbsp;Criminal Law
           </a>
           , including:
         </p>
@@ -69,9 +68,9 @@ class ExpertServices extends React.Component {
         <h3>Employment Law</h3>
         <p>
           The Forensic Psychology experts are retained by both plaintiffs and
-          defense attorneys in all areas of{' '}
-          <a href="es_employment.shtml" className="inline">
-            Employment Law
+          defense attorneys in all areas of
+          <a href="#" className="inline" onClick={() => this.props.onClick('Employment Law')}>
+          &nbsp;Employment Law
           </a>
           , including:
         </p>
@@ -111,9 +110,9 @@ class ExpertServices extends React.Component {
         <h3>Immigration Law</h3>
         <p>
           The Forensic Psychology Group experts have extensive experience in the
-          area of{' '}
-          <a href="es_immigration.shtml" className="inline">
-            Immigration Law
+          area of
+          <a href="#" className="inline" onClick={() => this.props.onClick('Immigration Law')}>
+          &nbsp;Immigration Law
           </a>
           , including:
         </p>
@@ -144,9 +143,9 @@ class ExpertServices extends React.Component {
         <h3>Civil Law and Negligence Law</h3>
         <p>
           The Group's forensic psychological experts have extensive experience
-          in civil matters and{' '}
-          <a href="es_negligence.shtml" className="inline">
-            negligence cases
+          in civil matters and 
+          <a href="#" className="inline" onClick={() => this.props.onClick('Negligence Law')}>
+             &nbsp;Negligence cases
           </a>
           , including:
         </p>

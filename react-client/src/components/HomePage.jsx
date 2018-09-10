@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer.jsx';
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -51,17 +52,8 @@ class HomePage extends React.Component {
             at U.S. Immigration and Customs Enforcement (ICE) detention centers and correctional facilities.
           </p>
         </div>
-        <div className="landing-page-text">
-          <strong style={{color: 'red'}}>
-            FORENSIC PSYCHOLOGY GROUP • 141 EAST 55TH STREET, SUITE 2A • NEW YORK, NY 10022 • 212-935-6133
-          </strong>
-          <p style={{fontStyle: 'italic'}}>Evening and Weekend Appointments Available</p>
-          <ul style={style}>
-            To protect the privacy of our clients and their families, the names, ages, and locations
-            of the cases mentioned on this website have been changed.
-          </ul>
-          <p>© 2009-2017 Watson Communications</p>
-        </div>
+        <div className="landing-page-text"><Footer /></div>
+        
       </div>
       
     )
