@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './Logo.jsx';
 
 class ContactUs extends React.Component {
   constructor(props) {
@@ -9,9 +10,10 @@ class ContactUs extends React.Component {
   render() {
     return (
       <div>
-        <img src="http://forensicpsychologyexperts.com/images/header_topimage.jpg" />
-        <br />
-        <img src="http://forensicpsychologyexperts.com/images/header_slogan.gif" alt="" />
+        <div className="header-pic">
+          <Logo />
+          <img src="http://forensicpsychologyexperts.com/images/header_slogan.gif" alt="" />
+        </div>
         <h3>Contact Us</h3>
         <p>
           The main offices of the Forensic Psychology Group are located in New

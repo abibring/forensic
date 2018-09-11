@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from './Footer.jsx';
+import Logo from './Logo.jsx';
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class HomePage extends React.Component {
     return (
       <div>
         <div className="header-pic">
-          <img src="http://forensicpsychologyexperts.com/images/header_topimage.jpg"/>
+          <Logo />
           <img src="http://forensicpsychologyexperts.com/images/home_main1.jpg" />
         </div>
         <div className="landing-page-text">

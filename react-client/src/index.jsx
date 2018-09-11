@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import axios from 'axios';
-import Navigation from './components/Navigation.jsx';
+import NavBar from './components/NavBar.jsx';
 import HomePage from './components/HomePage.jsx';
 import ExpertServices from './components/ExpertServices.jsx';
 import CriminalLaw from './components/CriminalLaw.jsx';
@@ -9,17 +8,16 @@ import ImmigrationLaw from './components/ImmigrationLaw.jsx';
 import EmploymentLaw from './components/EmploymentLaw.jsx';
 import SSDisability from './components/SSDisability.jsx';
 import Negligence from './components/NegligenceLaw.jsx';
-import StephenReich from './components/StephenReich.jsx';
-import IsabelRodriguez from './components/IsabelRodriguez.jsx';
-import GeraldBryant from './components/GeraldBryant.jsx';
-import JudithGibbons from './components/JudithGibbons.jsx';
-import TomBoland from './components/TomBoland.jsx';
-import AndreaHamilton from './components/AndreaHamilton.jsx';
-import HarrySchmitz from './components/HarrySchmitz.jsx'
+import StephenReich from './components/experts/StephenReich.jsx';
+import IsabelRodriguez from './components/experts/IsabelRodriguez.jsx';
+import GeraldBryant from './components/experts/GeraldBryant.jsx';
+import JudithGibbons from './components/experts/JudithGibbons.jsx';
+import TomBoland from './components/experts/TomBoland.jsx';
+import AndreaHamilton from './components/experts/AndreaHamilton.jsx';
+import HarrySchmitz from './components/experts/HarrySchmitz.jsx'
 import OnTheAir from './components/OnTheAir.jsx';
 import InTheNews from './components/InTheNews.jsx';
 import ContactUs from './components/ContactUs.jsx';
-
 
 class App extends React.Component {
   constructor(props) {
@@ -28,8 +26,6 @@ class App extends React.Component {
     this.onClickNav = this.onClickNav.bind(this);
   }
   onClickNav(navCat) {
-    // console.log(navCat)
-    // const { , showExpert, showCriminal, showHome } = this.state;
     if (navCat === 'Expert Services') {
       this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: true, showEmployment: false });
     } else if (navCat === 'Criminal Law') {
@@ -69,7 +65,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Navigation onClick={this.onClickNav} />
+        <NavBar onClick={this.onClickNav} />
         {this.state.showHome ? <HomePage /> : ''}
         {this.state.showExpert ? <ExpertServices onClick={this.onClickNav}/> : ''}
         {this.state.showCriminal ? <CriminalLaw /> : ''}

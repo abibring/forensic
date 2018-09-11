@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from './Footer.jsx';
+import Logo from './Logo.jsx';
 
 class Negligence extends React.Component {
   constructor(props) {
@@ -10,8 +11,9 @@ class Negligence extends React.Component {
   render() {
     return (
       <div>
-        <img src="http://forensicpsychologyexperts.com/images/header_topimage.jpg" />
-        <br />
+        <div className="header-pic">
+          <Logo />
+        </div>
         <img src="http://forensicpsychologyexperts.com/images/header_slogan.gif" />
         <h3>Expert Services in Injury and Negligence Cases</h3>
         <p>

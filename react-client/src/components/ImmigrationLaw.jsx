@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from './Footer.jsx';
+import Logo from './Logo.jsx';
 
 class ImmigrationLaw extends React.Component {
   constructor(props) {
@@ -9,8 +10,9 @@ class ImmigrationLaw extends React.Component {
   render() {
     return (
       <div>
-        <img src="http://forensicpsychologyexperts.com/images/header_topimage.jpg" />
-        <br />
+        <div className="header-pic">
+          <Logo />
+        </div>
         <div>
           <img src="http://forensicpsychologyexperts.com/images/header_slogan.gif"/>
           <br />

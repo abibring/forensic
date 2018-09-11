@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from './Footer.jsx';
+import Logo from './Logo.jsx';
 
 class EmploymentLaw extends React.Component {
   constructor(props) {
@@ -10,8 +11,9 @@ class EmploymentLaw extends React.Component {
   render() {
     return (
       <div>
-        <img src="http://forensicpsychologyexperts.com/images/header_topimage.jpg" />
-        <br />
+        <div className="header-pic">
+          <Logo />
+        </div>
         <img src="http://forensicpsychologyexperts.com/images/header_slogan.gif" alt="" />
         <img src="http://forensicpsychologyexperts.com/images/3_employment_psychologists.jpg" width="540" height="200" alt="Employment Law Expert Psychologists" border="0" />
         <h3>Expert Psychological Services in Employment Law Cases</h3>

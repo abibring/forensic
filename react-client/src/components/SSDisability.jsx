@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from './Footer.jsx';
+import Logo from './Logo.jsx';
 
 class SSDisability extends React.Component {
   constructor(props) {
@@ -10,8 +11,9 @@ class SSDisability extends React.Component {
   render() {
     return (
       <div>
-        <img src="http://forensicpsychologyexperts.com/images/header_topimage.jpg" />
-        <br />
+        <div className="header-pic">
+          <Logo />
+        </div>
         <img
           src="http://forensicpsychologyexperts.com/images/header_slogan.gif"
           alt=""
@@ -43,46 +45,35 @@ class SSDisability extends React.Component {
           and physical. The doctors evaluate for a variety of mental conditions,
           including:
         </p>
-        <table width="80%">
-          <tr>
-            <td>
-              <img src="images/spacer.gif" alt="" />
-            </td>
-            <td width="60%" valign="top">
-              <p>Agoraphobia</p>
-              <p>Anxiety</p>
-              <p>Severe Autism </p>
-              <p>Bi-polar disorders</p>
-              <p>Borderline Personality</p>
-              <p>Brain Injury</p>
-              <p>Major Depression</p>
-              <p>Developmental Disability</p>
-              <p>Downs Syndrome</p>
-              <p>Drug and Alcohol Addiction </p>
-              <p>Hypochondria</p>
-            </td>
-            <td>
-              <img src="images/spacer.gif" alt="" />
-            </td>
-            <td width="40%" valign="top">
-              <p>Manic Episodes </p>
-              <p>Mental Retardation</p>
-              <p>Nervous Breakdown</p>
-              <p>Obsessive Compulsive</p>
-              <p>Panic Attacks</p>
-              <p>Paranoia</p>
-              <p>Phobias</p>
-              <p>Post Traumatic Stress</p>
-              <p>Psychotic Episodes</p>
-              <p>Schizophrenia</p>
-              <p>Tourettes Syndrome</p>
-            </td>
-            <td>
-              <img src="images/spacer.gif" width="20" height="1" alt="" />
-            </td>
-          </tr>
-        </table>
-
+        <img src="images/spacer.gif" alt="" />
+        <div width="60%" valign="top">
+          <p>Agoraphobia</p>
+          <p>Anxiety</p>
+          <p>Severe Autism </p>
+          <p>Bi-polar disorders</p>
+          <p>Borderline Personality</p>
+          <p>Brain Injury</p>
+          <p>Major Depression</p>
+          <p>Developmental Disability</p>
+          <p>Downs Syndrome</p>
+          <p>Drug and Alcohol Addiction </p>
+          <p>Hypochondria</p>
+        </div>
+        <img src="images/spacer.gif" alt="" />
+        <div width="40%" valign="top">
+          <p>Manic Episodes </p>
+          <p>Mental Retardation</p>
+          <p>Nervous Breakdown</p>
+          <p>Obsessive Compulsive</p>
+          <p>Panic Attacks</p>
+          <p>Paranoia</p>
+          <p>Phobias</p>
+          <p>Post Traumatic Stress</p>
+          <p>Psychotic Episodes</p>
+          <p>Schizophrenia</p>
+          <p>Tourettes Syndrome</p>
+        </div>
+        <img src="images/spacer.gif" width="20" height="1" alt="" />
         <h3>Mental Disorders, SSI and SSD</h3>
         <p>
           Before determining whether the illness is severe enough to prevent a

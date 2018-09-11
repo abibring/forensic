@@ -8,13 +8,11 @@ class Footer extends React.Component {
   render() {
     return (
       <div>
-        <td
-          colspan="3"
+        <div
           valign="bottom"
           style={{ color: 'red' }}
         >
           <div align="center">
-            <p />
             <p>
             <strong>
                 <span>
@@ -28,18 +26,15 @@ class Footer extends React.Component {
               </strong>
             </p>
           </div>
-        </td>
+        </div>
         <br />
-        <td colspan="3" valign="bottom">
           <div align="center">
             <p />
             <p>
               <i>Evening and Weekend Appointments Available</i>
             </p>
           </div>
-        </td>
         <br />
-        <td colspan="3" valign="bottom">
           <div align="center">
             <p />
             <p>
@@ -51,15 +46,13 @@ class Footer extends React.Component {
               </i>
             </p>
           </div>
-        </td>
         <br />
-        <td colspan="3" valign="bottom">
           <div align="center">
             <p />
             <p>&copy; 2009-2017 Watson Communications</p>
           </div>
-        </td>
-      </div>  
+        </div>
+        
     )
   }
 }
