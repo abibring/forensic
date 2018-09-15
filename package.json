@@ -15,6 +15,7 @@
   "author": "Alon Bibring",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^3.0.3",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
