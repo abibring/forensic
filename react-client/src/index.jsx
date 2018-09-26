@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import NavBar from './components/NavBar.jsx';
 import HomePage from './components/HomePage.jsx';
 import ExpertServices from './components/ExpertServices.jsx';
@@ -18,72 +19,33 @@ import HarrySchmitz from './components/experts/HarrySchmitz.jsx'
 import OnTheAir from './components/OnTheAir.jsx';
 import InTheNews from './components/InTheNews.jsx';
 import ContactUs from './components/ContactUs.jsx';
+// import Parallax from './components/Parallax/Parallax.jsx';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: true, showExpert: false, showEmployment: false  };
-    this.onClickNav = this.onClickNav.bind(this);
-  }
-  onClickNav(navCat) {
-    if (navCat === 'Expert Services') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: true, showEmployment: false });
-    } else if (navCat === 'Criminal Law') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: true, showHome: false, showExpert: false, showEmployment: false });
-    } else  if (navCat === 'Immigration Law') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: true, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'Employment Law') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: true });
-    } else if (navCat === 'SS Disability') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: true, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'Negligence Law') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: true, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'Dr. Stephen Reich') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: true, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'Dr. Isabel A. Rodriguez') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: true, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'Dr. Gerald Bryant') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: true, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'Dr. Judith Gibbons') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: true, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'Dr. Tom Boland') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: true, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'Dr. Andrea Hamilton') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: true, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'Dr. Harry Schmitz') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: true, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'On The Air') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: true, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'In The News') {
-      this.setState({ showContact: false, showInNews: true, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'Contact Us') {
-      this.setState({ showContact: true, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: false, showExpert: false, showEmployment: false });
-    } else if (navCat === 'Home') {
-      this.setState({ showContact: false, showInNews: false, showOnAir: false, showHarry: false, showAndrea: false, showTom: false, showJudith: false, showGerald: false, showIsabel: false, showStephen: false, showNegligence: false, showDisability: false, showImmigration: false, showCriminal: false, showHome: true, showExpert: false, showEmployment: false });
-    }
-  }
   render() {
     return (
-      <div className="app">
-        <NavBar onClick={this.onClickNav} />
-        {this.state.showHome ? <HomePage /> : ''}
-        {this.state.showExpert ? <ExpertServices onClick={this.onClickNav}/> : ''}
-        {this.state.showCriminal ? <CriminalLaw /> : ''}
-        {this.state.showImmigration ? <ImmigrationLaw  /> : ''}
-        {this.state.showEmployment ? <EmploymentLaw  /> : ''}
-        {this.state.showDisability ? <SSDisability /> : ''}
-        {this.state.showNegligence ? <Negligence /> : ''}
-        {this.state.showStephen ? <StephenReich /> : ''}
-        {this.state.showIsabel ? <IsabelRodriguez /> : ''}
-        {this.state.showGerald ? <GeraldBryant  /> : ''}
-        {this.state.showJudith ? <JudithGibbons  /> : ''}
-        {this.state.showTom ? <TomBoland /> : ''}
-        {this.state.showAndrea ? <AndreaHamilton /> : ''}
-        {this.state.showHarry ? <HarrySchmitz /> : ''}
-        {this.state.showOnAir ? <OnTheAir /> : ''}
-        {this.state.showInNews ? <InTheNews /> : ''}
-        {this.state.showContact ? <ContactUs /> : ''}
-      </div>
+      <Router>
+        <div className="app">
+          <NavBar />
+          <Route exact path="/" render={() => <HomePage />}/>
+          <Route path="/expertservices" render={() => <ExpertServices/>} />
+          <Route path="/criminallaw" render={() => <CriminalLaw />}/>
+          <Route path="/employmentlaw" render={() => <EmploymentLaw />}/>
+          <Route path="/disability" render={() => <SSDisability />}/>
+          <Route path="/negligence" render={() => <Negligence />}/>
+          <Route path="/immigration" render={() => <ImmigrationLaw />} />
+          <Route path="/stephenreich" render={() => <StephenReich />}/>
+          <Route path="/isabelrodriguez" render={() => <IsabelRodriguez />}/>
+          <Route path="/geraldbryant" render={() => <GeraldBryant />}/>
+          <Route path="/judithgibbons" render={() => <JudithGibbons />}/>
+          <Route path="/tomboland" render={() => <TomBoland />}/>
+          <Route path="/andreahamilton" render={() => <AndreaHamilton />}/>
+          <Route path="/harryschmitz" render={() => <HarrySchmitz />}/>
+          <Route path="/ontheair" render={() => <OnTheAir />}/>
+          <Route path="/inthenews" render={() => <InTheNews />}/>
+          <Route path="/contactus" render={() => <ContactUs />}/>
+        </div>
+      </Router>
     );
   }
 } 

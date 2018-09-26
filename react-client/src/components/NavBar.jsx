@@ -1,8 +1,11 @@
 import React from 'react';
 import { Nav, Navbar, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const navCategories = ['Expert Services', 'Criminal Law', 'Immigration Law', 'Employment Law', 'SS Disability', 'Negligence Law', 'On The Air', 'In The News'];
-const dropDownCategories = ['Dr. Stephen Reich', 'Dr. Isabel A. Rodriguez', 'Dr. Gerald Bryant', 'Dr. Judith Gibbons', 'Dr. Tom Boland', 'Dr. Andrea Hamilton', 'Dr. Harry Schmitz'];
+const navcat = ['expertservices', 'criminallaw', 'immigration', 'employmentlaw', 'disability', 'negligence', 'ontheair', 'inthenews'];
+const dropDownCategories = ['Dr. Stephen Reich', 'Dr. Isabel A. Rodríguez', 'Dr. Gerald Bryant', 'Dr. Judith Gibbons', 'Dr. Tom Boland', 'Dr. Andrea Hamilton', 'Dr. Harry Schmitz'];
+const ddcat = ['stephenreich', 'isabelrodriguez', 'geraldbryant', 'judithgibbons', 'tomboland', 'andreahamilton', 'harryschmitz'];
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -11,21 +14,23 @@ class NavBar extends React.Component {
 
   render() {
     const { onClick } = this.props;
+    const { navCategories, dropDownCategories } = this.state;
     return (
       <Navbar inverse collapseOnSelect fixedTop fluid>
         <Nav>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#" onClick={() => onClick('Home')}>Home</a>
+             <Link to="/">Home</Link>
             </Navbar.Brand>
           </Navbar.Header>
           <NavDropdown title="Experts" id="basic-nav-dropdown">
-            {this.state.dropDownCategories.map((dropDownCat, i) => (
-              <MenuItem onClick={() => onClick(dropDownCat)} eventKey={i} key={dropDownCat}>{dropDownCat}</MenuItem>      
+            {ddcat.map((dropDownCat, i) => (
+              <MenuItem eventKey={i} key={dropDownCat}><Link to={dropDownCat}>{dropDownCat}</Link></MenuItem>      
             ))}
           </NavDropdown>
-          {this.state.navCategories.map(navCat => <NavItem  href="#" key={navCat} onClick={() => onClick(navCat)}>{navCat}</NavItem>)}
-          <NavItem href="#" onClick={() => onClick('Contact Us')}>Contact Us</NavItem>
+          {navcat.map(nav => <NavItem href="#" key={nav}><Link to={nav}>{nav}</Link></NavItem>)}
+          <NavItem><Link to="/contactus">Contact Us</Link></NavItem>
+          
        </Nav>
       </Navbar>
     );

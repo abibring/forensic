@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../Footer.jsx';
 import Logo from '../Logo.jsx';
+import { harryContent } from '../data.js';
 
 class HarrySchmitz extends React.Component {
   constructor(props) {
@@ -13,8 +14,8 @@ class HarrySchmitz extends React.Component {
       <div>
         <div className="header-pic">
           <Logo />
+          <img src="http://forensicpsychologyexperts.com/images/header_slogan.gif" />
         </div>
-        <img src="http://forensicpsychologyexperts.com/images/header_slogan.gif" />
         <br />
         <h3>
           <img
@@ -24,16 +25,13 @@ class HarrySchmitz extends React.Component {
           />
           Meet Dr. Harry Schmitz
         </h3>
-        <p>Professional profile coming soon.</p>
-        <h3>
-          Evaluations at ICE Detention Centers and Correctional Facilities
-        </h3>
-        <p>
-          The doctors of the Forensic Psychology Group are available to perform
-          psychological evaluations and criminal psychological assessments at
-          U.S. Immigration and Customs Enforcement (ICE) detention centers and
-          correctional facilities.
-        </p>
+        <h5>Professional profile coming soon.</h5>
+        {harryContent.map(content => (
+          <div key={content.header}>
+            <h4>{content.header}</h4>
+            <p>{content.paragraph}</p>
+          </div>
+        ))}
         <Footer />
       </div>
     );
