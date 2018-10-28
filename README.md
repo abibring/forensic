@@ -2,5 +2,5 @@
 updating http://forensicpsychologyexperts.com/
 
 
-To Run Locally:
+To run locally:
 npm run react-dev && npm run server-dev
