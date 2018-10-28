@@ -4,11 +4,6 @@ import Logo from '../Logo.jsx';
 import { isabelContent } from '../data.js';
 
 class IsabelRodriguez extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

@@ -4,11 +4,6 @@ import Logo from './Logo.jsx';
 import { expertCriminalList, expertEmploymentList, expertImmigrationList, expertCivilList } from './data.js';
 
 class ExpertServices extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

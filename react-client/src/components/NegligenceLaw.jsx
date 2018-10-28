@@ -4,11 +4,6 @@ import Logo from './Logo.jsx';
 import { negligenceHeader, negligenceListItems, negligenceNumber, negligenceText } from './data.js';
 
 class Negligence extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

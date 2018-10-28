@@ -5,11 +5,6 @@ import { criminalLawList } from './data.js';
 
 
 class CriminalLaw extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

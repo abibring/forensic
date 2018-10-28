@@ -4,11 +4,6 @@ import Logo from './Logo.jsx';
 import { disabilityBodyText, disabilityTitleText, disabilityDisorders } from './data.js';
 
 class SSDisability extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

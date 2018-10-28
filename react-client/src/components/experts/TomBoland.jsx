@@ -4,11 +4,6 @@ import Logo from '../Logo.jsx';
 import { tomContent, tomListItems, contactSteph } from '../data.js';
 
 class TomBoland extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

@@ -4,10 +4,6 @@ import Logo from './Logo.jsx';
 import { immigrationServiceList, immigrationContent } from './data.js';
 
 class ImmigrationLaw extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   render() {
     return (
       <div>

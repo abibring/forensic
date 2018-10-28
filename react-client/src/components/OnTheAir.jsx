@@ -4,11 +4,6 @@ import Logo from './Logo.jsx';
 import { onAirText, onAirVideoText, onAirHeaderText } from './data.js';
 
 class OnTheAir extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

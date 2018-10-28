@@ -2,19 +2,13 @@ import React from 'react';
 import { Nav, Navbar, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const navCategories = ['Expert Services', 'Criminal Law', 'Immigration Law', 'Employment Law', 'SS Disability', 'Negligence Law', 'On The Air', 'In The News'];
+// const navCategories = ['Expert Services', 'Criminal Law', 'Immigration Law', 'Employment Law', 'SS Disability', 'Negligence Law', 'On The Air', 'In The News'];
+// const dropDownCategories = ['Dr. Stephen Reich', 'Dr. Isabel A. Rodríguez', 'Dr. Gerald Bryant', 'Dr. Judith Gibbons', 'Dr. Tom Boland', 'Dr. Andrea Hamilton', 'Dr. Harry Schmitz'];
 const navcat = ['expertservices', 'criminallaw', 'immigration', 'employmentlaw', 'disability', 'negligence', 'ontheair', 'inthenews'];
-const dropDownCategories = ['Dr. Stephen Reich', 'Dr. Isabel A. Rodríguez', 'Dr. Gerald Bryant', 'Dr. Judith Gibbons', 'Dr. Tom Boland', 'Dr. Andrea Hamilton', 'Dr. Harry Schmitz'];
 const ddcat = ['stephenreich', 'isabelrodriguez', 'geraldbryant', 'judithgibbons', 'tomboland', 'andreahamilton', 'harryschmitz'];
-class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { navCategories: navCategories, dropDownCategories: dropDownCategories };
-  }
 
+class NavBar extends React.Component {
   render() {
-    const { onClick } = this.props;
-    const { navCategories, dropDownCategories } = this.state;
     return (
       <Navbar inverse collapseOnSelect fixedTop fluid>
         <Nav>

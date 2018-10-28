@@ -4,11 +4,6 @@ import Logo from '../Logo.jsx';
 import { harryContent } from '../data.js';
 
 class HarrySchmitz extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

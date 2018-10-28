@@ -4,11 +4,6 @@ import Logo from '../Logo.jsx';
 import { andreaContent, contactSteph }  from '../data.js';
 
 class AndreaHamilton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

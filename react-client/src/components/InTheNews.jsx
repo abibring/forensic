@@ -5,11 +5,6 @@ import { newsArticles } from './data.js';
 
 
 class InTheNews extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

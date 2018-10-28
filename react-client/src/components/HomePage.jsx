@@ -4,11 +4,6 @@ import Logo from './Logo.jsx';
 import { homePageContent } from './data.js';
 
 class HomePage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {}
-  }
-
   render() {
     const style = {fontStyle: 'italic', paddingLeft: 10, paddingRight: 10, display: 'table', borderCollapse: 'separate', borderSpacing: 2, verticalAlign: 'text-top'};
     return (

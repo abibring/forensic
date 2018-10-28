@@ -4,11 +4,6 @@ import Logo from '../Logo.jsx';
 import { geraldServices, geraldTesting, geraldContent, contactSteph } from '../data.js';
 
 class GeraldBryant extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

@@ -4,11 +4,6 @@ import Logo from './Logo.jsx';
 import { employmentLawContent } from './data.js';
 
 class EmploymentLaw extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

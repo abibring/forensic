@@ -4,11 +4,6 @@ import Logo from '../Logo.jsx';
 import { judithContent, judithEvals, judithListItems, judithParagraphItems, judithLawList, contactSteph } from '../data.js';
 
 class JudithGibbons extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

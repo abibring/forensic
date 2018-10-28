@@ -4,11 +4,6 @@ import Logo from '../Logo.jsx';
 import { stephenContent } from '../data.js'; 
 
 class StephenReich extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>

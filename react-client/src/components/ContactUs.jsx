@@ -2,11 +2,6 @@ import React from 'react';
 import Logo from './Logo.jsx';
 
 class ContactUs extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <div>
